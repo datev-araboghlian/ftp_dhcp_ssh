@@ -9,13 +9,13 @@ Cette documentation couvre les configurations pour plusieurs services réseau es
 Cette section explique comment installer et configurer un serveur DNS avec BIND9. Elle inclut la création de zones DNS, la configuration des enregistrements NS et A, ainsi que la configuration des options de BIND9DHCP avec Kea DHCP. Elle inclut la configuration des sous-réseaux, des pools d'adresses IP et des options DHCP.
 
 Points clés :
-Installation de BIND9 : sudo apt install bind9 -y
-Configuration des zones DNS dans /etc/bind/zones/db.ftp.com.
-Configuration des options DNS dans /etc/bind/named.conf.options.
-Redémarrage du service : sudo systemctl restart bind9
-Installation de Kea DHCP : sudo apt install kea-dhcp4-server -y
-Configuration dans /etc/kea/kea-dhcp4.conf.
-Exemple de configuration pour un sous-réseau :
+- Installation de BIND9 : sudo apt install bind9 -y
+- Configuration des zones DNS dans /etc/bind/zones/db.ftp.com.
+- Configuration des options DNS dans /etc/bind/named.conf.options.
+- Redémarrage du service : sudo systemctl restart bind9
+- Installation de Kea DHCP : sudo apt install kea-dhcp4-server -y
+- Configuration dans /etc/kea/kea-dhcp4.conf.
+- Exemple de configuration pour un sous-réseau :
 "subnet4": [
     {
         "subnet": "172.20.0.0/16",
